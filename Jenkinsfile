@@ -1,15 +1,18 @@
 pipeline {
-    agent { docker { image 'node:10-jessie' } }
+    agent { docker { image 'softinstigate/serverless' } }
     stages {
         stage('Test') {
             steps {
-                sh 'echo "Hello World"'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
-                sh 'npm --version'
-                sh 'exit 0'
+                sh 'echo "------------------- BEGINNING DEPLOY --------------"'
+                // sh 'echo "Hello World"'
+                // sh '''
+                    // echo "Multiline shell steps works too"
+                    // ls -lah
+                // '''
+                // sh 'npm --version'
+                sh 'sls --version'
+                sh 'echo "------------------- DEPLOY FINISHED --------------"'
+ 
             }
         }
     }
