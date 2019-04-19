@@ -10,7 +10,6 @@ pipeline {
                     // ls -lah
                 // '''
                 // sh 'npm --version'
-                sh 'npm install serverless -g'
                 sh 'sls --version'
                 sh 'echo "------------------- DEPLOY FINISHED --------------"'
  
