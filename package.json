@@ -1,0 +1,14 @@
+{
+  "name": "jenkins--serverless",
+  "description": "",
+  "version": "0.1.0",
+  "scripts": {
+    "start-dev": "sls offline start --port 3001"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serverless-offline": "^4.9.4",
+    "serverless-webpack": "^5.2.0",
+    "webpack": "^4.30.0"
+  }
+}
