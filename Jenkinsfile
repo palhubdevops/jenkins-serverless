@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'softinstigate/serverless' } }
+    agent { docker { image 'adalbertorsilvajr/node-serverless' } }
     stages {
         stage('Test') {
             steps {
