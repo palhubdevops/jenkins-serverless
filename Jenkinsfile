@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'adalbertorsilvajr/node-serverless' } }
+    agent { docker { image 'node:10-jessie' } }
     stages {
         stage('Test') {
             steps {
@@ -10,6 +10,7 @@ pipeline {
                     // ls -lah
                 // '''
                 // sh 'npm --version'
+                sh 'npm install serverless -g'
                 sh 'sls --version'
                 sh 'echo "------------------- DEPLOY FINISHED --------------"'
  
