@@ -9,7 +9,7 @@ pipeline {
                     ls -lah
                 '''
                 sh 'npm --version'
-                sh 'exit 1'
+                sh 'exit 0'
             }
         }
     }
