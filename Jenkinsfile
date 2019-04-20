@@ -11,7 +11,7 @@ pipeline {
                 // '''
                 // sh 'npm --version'
                 sh 'npm install'
-                sh 'sls --version'
+                sh 'sls deploy --aws-profile alex'
                 sh 'echo "------------------- DEPLOY FINISHED --------------"'
  
             }
