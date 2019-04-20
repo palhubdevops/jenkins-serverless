@@ -1,5 +1,11 @@
 pipeline {
     agent { docker { image 'adalbertorsilvajr/node-serverless:1.0' } }
+
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+    }
+
     stages {
         stage('Test') {
             steps {
@@ -10,8 +16,9 @@ pipeline {
                     // ls -lah
                 // '''
                 // sh 'npm --version'
-                sh 'npm install'
-                sh 'sls deploy --aws-profile alex'
+                // sh 'npm install'
+                // sh 'sls deploy --aws-profile alex'
+                sh 'printenv'
                 sh 'echo "------------------- DEPLOY FINISHED --------------"'
  
             }
