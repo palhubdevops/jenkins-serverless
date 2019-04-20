@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'adalbertorsilvajr/node-serverless' } }
+    agent { docker { image 'adalbertorsilvajr/node-serverless:1.0' } }
     stages {
         stage('Test') {
             steps {
