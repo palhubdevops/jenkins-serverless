@@ -1,3 +1,3 @@
-handler: ./farewell/handler.farewell
+handler: /farewell/handler.farewell
 events:
   - http: get /farewell

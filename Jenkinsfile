@@ -18,7 +18,7 @@ pipeline {
                 // sh 'npm --version'
                 // sh 'npm install'
                 // sh 'sls deploy --aws-profile alex'
-                sh 'echo $JENKINS_HOME'
+                sh 'cat ~/.aws/credentials'
                 sh 'echo "------------------- DEPLOY FINISHED --------------"'
  
             }
