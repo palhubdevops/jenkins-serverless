@@ -1,4 +1,5 @@
 pipeline {
+    agents any
     stages {
         stage('Test') {
             steps {
@@ -17,7 +18,7 @@ pipeline {
             }
         }
     }
-}
+
     post {
         always {
             echo 'This will always run'
