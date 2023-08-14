@@ -1,11 +1,4 @@
 pipeline {
-    agent { docker { image 'adalbertorsilvajr/node-serverless:1.0' } }
-
-    environment {
-        DISABLE_AUTH = 'true'
-        DB_ENGINE    = 'sqlite'
-    }
-
     stages {
         stage('Test') {
             steps {
